@@ -5,6 +5,20 @@ block content
   script(src="/javascripts/jquery-1.6.4.min.js")
   script(src="/javascripts/view.index.js")
 
+  #left-column.column
+    h2 Elige tu héroe
+    ul#heroes
+      each hero in heroes
+        li(class='hero-name')
+          a(href='#') #{hero}
+
+  #right-column.column
+    h2 Facts
+    ul#facts
+    label(for="new-fact") Añadir nuevo fact:
+    textarea#new-fact
+    a(id='add-new-fact', href='#') Añadir
+    
 <div class="banner">
     <h1 class="banner_h1 imgpng">股票拜师群 深套向盈利逆袭</h1>
     <p class="banner_h2 imgpng">加入QQ群 免费获悉<b>下只黑马股</b>信息<span>[剩余名额23人]</span></p>
